@@ -1,0 +1,67 @@
+Metrics/LineLength:
+  Max: 120
+  Enabled: true
+
+Metrics/ModuleLength:
+  Max: 120
+  Enabled: true
+
+Metrics/ParameterLists:
+  Max: 6
+
+Metrics/BlockLength:
+  Max: 30
+  Enabled: true
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Lint/MissingCopEnableDirective:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion: 2.6.5
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'test/**/*'
+    - 'node_modules/**/*'
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
