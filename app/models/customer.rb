@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
 class Customer < ApplicationRecord
-  validates :email, :date_of_birth, presence: true
+  has_many :orders, foreign_key: :customer_id, dependent: :destroy
+
+  validates :email, uniqueness: true, presence: true
+  validates :date_of_birth, presence: true
 end
