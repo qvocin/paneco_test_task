@@ -1,0 +1,6 @@
+# frozen_string_literal: true
+
+table_for customers do
+  column('email') { |customer| customer['email'] }
+  column('most total amount') { |customer| format('%.2f', customer['order_total_sum']) }
+end
