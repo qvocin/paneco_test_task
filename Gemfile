@@ -36,6 +36,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop', '~> 0.88.0', require: false
+  gem 'faker', '~> 2.13'
 end
 
 group :test do
