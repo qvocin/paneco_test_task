@@ -2,5 +2,6 @@
 
 table_for customers do
   column('email') { |customer| customer['email'] }
+  column('date of birth') { |customer| customer['date_of_birth'] }
   column('most total amount') { |customer| format('%.2f', customer['order_total_sum']) }
 end
