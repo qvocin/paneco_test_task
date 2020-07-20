@@ -28,4 +28,7 @@ end
   order.order_total = order.order_items.inject(0) { |sum, item| sum + item.calculate_sum }
   order.save!
 end
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
 p 'Finish'
