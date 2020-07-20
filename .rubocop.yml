@@ -14,6 +14,7 @@ Metrics/BlockLength:
   Enabled: true
   Exclude:
     - 'spec/**/*.rb'
+    - 'app/admin/**/*.rb'
 
 Style/Documentation:
   Enabled: false

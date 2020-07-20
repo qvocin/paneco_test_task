@@ -21,7 +21,7 @@ end
   rand(1..4).times do
     order_item = OrderItem.create!(product_name: Faker::Commerce.product_name,
                                    quantity: rand(1..5),
-                                   price: Faker::Commerce.price,
+                                   price: Faker::Commerce.price(range: 1..100.0),
                                    order_id: order.id)
     order.order_items << order_item
   end
