@@ -1,0 +1,5 @@
+<%= form_for :report_top_10, url: admin_reports_top_10_report_path do |form| %>
+  <%= form.label 'Older than' %><br>
+  <%= form.number_field :age %>
+  <%= form.submit 'Make report'  %>
+<% end  %>
