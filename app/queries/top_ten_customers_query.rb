@@ -7,7 +7,7 @@ class TopTenCustomersQuery
   def initialize(data)
     @customers = Customer.arel_table
     @orders = Order.arel_table
-    @age = data[:age].to_i
+    @age = data['age'].to_i
   end
 
   def top_10
@@ -29,7 +29,7 @@ class TopTenCustomersQuery
 
   def where_conditions
     query = customers[:id].eq(orders[:customer_id])
-    query = query.and(customers[:date_of_birth].lteq(@age.years.ago)) if @age.present? && @age.positive?
+    query = query.and(customers[:date_of_birth].lteq(age.years.ago)) if age.present? && age.positive?
     query
   end
 end

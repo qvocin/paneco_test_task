@@ -13,7 +13,9 @@ ActiveAdmin.register_page 'Reports' do
   end
 
   page_action :top_10_report, method: :post do
-    @customers = TopTenCustomersQuery.new(params['report_top_10']).top_10
+    data = {}
+    data['age'] = params['report_top_10']['age']
+    @customers = TopTenCustomersQuery.new(data).top_10
     render admin_reports_top_10_report_path
   end
 
