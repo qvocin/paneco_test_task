@@ -1,24 +1,72 @@
-# README
+##### Prerequisites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+- Github
+- Ruby 2.6.3
+- Rails 6.0.2
+- PostgreSQL
 
-* Ruby version
+##### 1. Check out the repository
 
-* System dependencies
+```bash
+git clone https://github.com/qvocin/paneco_test_task.git
+```
 
-* Configuration
+##### 2. Create and setup the database
 
-* Database creation
+Run the following commands to create and setup the database.
 
-* Database initialization
+```ruby
+rails db:create
+```
 
-* How to run the test suite
+##### 3. Create seeds
 
-* Services (job queues, cache servers, search engines, etc.)
+You can start the rails server using the command given below.
 
-* Deployment instructions
+```ruby
+rails db:seed
+```
 
-* ...
+And now you can visit the site with the URL http://localhost:3000/admin
+
+##### 4. Login and password for admin user
+
+```ruby
+User: admin@example.com
+Password: password
+```
+
+##### 5. Pages
+App has Customer, Order and Report pages
+
+CRUD implemented for Order and OrderItem models
+
+##### 6. Report page
+
+For create report you should click to button
+```ruby
+Make report
+```
+
+by default report will be create without any parameters
+
+The report has an optional parameter to include in the report only customers older than the given value.
+
+##### 7. Project has rubocop
+
+To run 
+
+```ruby
+rubocop
+```
+
+##### 7. Spec
+
+For spec are using Rspec and Capybara
+
+To run 
+```ruby
+rspec
+```
