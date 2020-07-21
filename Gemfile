@@ -29,6 +29,8 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'faker', '~> 2.13'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -39,15 +41,18 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop', '~> 0.88.0', require: false
-  gem 'faker', '~> 2.13'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'factory_bot_rails'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'database_cleaner-active_record'
+  gem 'shoulda-matchers'
+  gem 'shoulda-callback-matchers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
