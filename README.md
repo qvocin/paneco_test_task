@@ -1,3 +1,22 @@
+##### Task
+
+Our application has customers, orders, and order items.
+For simplicity, let's say that customers have only an email, and date of birth.
+Orders have a number, date, order total, customer who placed the order, and order items.
+Order items have a product name, price, and quantity.
+Order total is a sum of the following values calculated for all its items: order item quantity * order item price.
+
+Please implement web interface using Ruby on Rails for the following application features:
+  1. CRUD functions for Orders and Order Items
+  2. A report page to display the top 10 customers who made orders for the most total amount. The report fields: customer email, and a total of all customer orders. The report should have an optional parameter to include in the report only customers older than the given value. E.g. we want to see in the report top 10 customers older than 30 years old.
+
+Notes:
+  1. Implement the features following REST principles.
+  2. Use any gem or library that you need.
+  3. Do not implement authorization.
+  4. Place the project on GitHub and provide the link or send us a zip archive of the repo including all commits.
+
+
 ##### Prerequisites
 
 The setups steps expect following tools installed on the system.
